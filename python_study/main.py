@@ -1,5 +1,11 @@
-import information
+# import information
 
-message = information.welcome()
+# message = information.welcome()
 
-print (message)
+# print (message)
+
+from pathlib import Path
+
+path = Path('daiban.txt')
+contents = path.read_text()
+print(contents)
