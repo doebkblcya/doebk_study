@@ -253,10 +253,135 @@
 # # 启动游戏
 # main()
     
-class Test:
-    def prt(self):
-        print(self)
-        print(self.__class__)
+# class Test:
+#     def prt(self):
+#         print(self)
+#         print(self.__class__)
  
-t = Test()
-t.prt()
+# t = Test()
+# t.prt()
+
+# def a():
+#     print(b)
+
+# b = 1
+# a()
+# print(b)
+
+# import time, sys
+# indent = 0  #  How  many  spaces to indent. 
+
+
+# indentIncreasing = True # Whether the indentation is increasing or not. 
+
+
+
+# # try: 
+
+
+# while True: # The main program loop. 
+#     print('  ' *  indent,  end='') 
+#     print('********') 
+
+
+#     time.sleep(0.1) # Pause for 1/10 of a second. 
+
+
+
+#     if indentIncreasing: 
+
+
+#         #  Increase  the  number  of  spaces: 
+#         indent  =  indent  +  1
+#         if indent  ==  20: 
+
+
+#             #  Change  direction: 
+#             indentIncreasing = False
+#     else: 
+
+
+#         # Decrease the number of spaces: 
+#         indent  =  indent - 1
+#         if indent == 0: 
+
+
+#             # Change  direction:
+#             indentIncreasing = True
+# # except KeyboardInterrupt: 
+# #     sys.exit()
+
+# def collatz(number):
+#     if number % 2 == 0:
+#         return number // 2
+#     else:
+#         return 3 * number + 1
+
+
+# def main():
+#     num = int(input())
+#     while num != 1:
+#         num = collatz(num)
+#         print(num)
+
+# main()
+
+# birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+# while True:
+#     print('Enter a name: (blank to quit)')
+#     name = input()
+#     if name == '':
+#         break
+
+# if name in birthdays:
+#     print(birthdays[name] + ' is the birthday of ' + name)
+# else:
+#     print('I do not have birthday information for ' + name)
+#     print('What is their birthday?')
+#     bday = input()
+#     birthdays[name] = bday
+#     print('Birthday database updated.')
+#     print(birthdays)
+
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+
+def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+turn = 'X'
+
+for i in range(9):
+    printBoard(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    
+    move = input()
+
+
+
+    if move not in theBoard:
+        print("Invalid move. Please try again.")
+        continue
+    
+    if theBoard[move] != ' ':
+        print("This space is already taken. Please try again.")
+        continue
+    
+    theBoard[move] = turn
+    if turn == 'X':
+
+
+        turn = 'O'
+
+
+    else:
+
+
+        turn = 'X'
+
+
+printBoard(theBoard)
