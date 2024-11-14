@@ -344,44 +344,45 @@
 #     print('Birthday database updated.')
 #     print(birthdays)
 
-theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+# theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
 
-def printBoard(board):
-    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
-    print('-+-+-')
-    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
-    print('-+-+-')
-    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+# def printBoard(board):
+#     print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+#     print('-+-+-')
+#     print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+#     print('-+-+-')
+#     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
-turn = 'X'
+# turn = 'X'
 
-for i in range(9):
-    printBoard(theBoard)
-    print('Turn for ' + turn + '. Move on which space?')
+# for i in range(9):
+#     printBoard(theBoard)
+#     print('Turn for ' + turn + '. Move on which space?')
     
-    move = input()
+#     move = input()
 
 
 
-    if move not in theBoard:
-        print("Invalid move. Please try again.")
-        continue
+#     if move not in theBoard:
+#         print("Invalid move. Please try again.")
+#         continue
     
-    if theBoard[move] != ' ':
-        print("This space is already taken. Please try again.")
-        continue
+#     if theBoard[move] != ' ':
+#         print("This space is already taken. Please try again.")
+#         continue
     
-    theBoard[move] = turn
-    if turn == 'X':
+#     theBoard[move] = turn
+#     if turn == 'X':
 
 
-        turn = 'O'
+#         turn = 'O'
 
 
-    else:
+#     else:
 
 
-        turn = 'X'
+#         turn = 'X'
 
 
-printBoard(theBoard)
+# printBoard(theBoard)
+
