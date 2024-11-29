@@ -50,3 +50,9 @@ public class Puppy {
         System.out.println("变量值 : " + myPuppy.getAge());
     }
 }
+
+// public class Puppy {
+//     public static void main(String[] args) {
+//         System.out.println("Hello World");
+//     }
+// }
