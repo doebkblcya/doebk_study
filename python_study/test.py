@@ -1,13 +1,6 @@
-# import random
-# def random_action():
-#     global ene_action
-#     ene_action = random.randint(1,3)
-#     if ene_action == 1:
-#         ene_action = 'r'
-#     if ene_action == 2:
-#         ene_action = 'p'
-#     if ene_action == 3:
-#         ene_action = 's'
-#     return ene_action
-# random_action()
-# print(ene_action)
+while True:
+    s = input()  # 读取用户输入的一行字符串
+    s = s.replace("你", "我")  # 将字符串中的 "你" 替换为 "我"
+    s = s.replace("吗", "")  # 将字符串中的 "吗" 删除
+    s = s.replace("？", "！")  # 将字符串中的 "？" 替换为 "！"
+    print(s)
